@@ -3,18 +3,36 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+ <main>
+    <article>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+      <!-- 
+        - #HERO
+      -->
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/coach/Blog/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/coach/Blog/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
-</div>
+      <section class="section hero" aria-label="home">
+        <div class="container">
+
+          <h1 class="h1 hero-title">
+            <strong class="strong">Hotep, nous sommes panafricains.</strong> Voici nos pensées, nos histoires et nos idées
+          </h1>
+
+          <div class="wrapper">
+
+            <form action="" class="newsletter-form">
+              <input type="email" name="email_address" placeholder="Ton adresse-email" class="email-field">
+
+              <button type="submit" class="btn">Abonne toi</button>
+            </form>
+
+            <p class="newsletter-text">
+             Recevez la newsletter par e-mail et débloquez l'accès au contenu et aux mises à jour réservés aux membres
+            </p>
+
+          </div>
+
+        </div>
+      </section>
+</main>
+
 {% endblock %}

@@ -2,15 +2,213 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %} Blog Panafricain{% endblock %}</title>
+        <meta name="title" content="Blog panafricain">
+        <meta name="description" content="Un blog sur l'histoire africaine et l'excellence noire">
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         {% block stylesheets %}
-        {% endblock %}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+      {% endblock %}
+       
 
-        {% block javascripts %}
-        {% endblock %}
+      
     </head>
+
+ <header class="header section" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="{{ asset('images/logo.png')}}" width="129" height="40" alt="Blogy logo">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link hover:underline" data-nav-link>Accueil</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link hover:underline" data-nav-link>Derniers articles</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="{{ path('admin') }}" class="navbar-link hover:underline" data-nav-link>Tableau de bord</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <div class="wrapper">
+
+        <button class="search-btn" aria-label="search" data-search-toggler>
+          <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+
+          <span class="span">Rechercher</span>
+        </button>
+
+        <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
+          <span class="span one"></span>
+          <span class="span two"></span>
+          <span class="span three"></span>
+        </button>
+
+        <a href="#" class="btn">Inscription</a>
+
+      </div>
+
+    </div>
+  </header>
+
+
+
+
+
     <body>
-        {% block body %}{% endblock %}
+   
+
+  {% block body %}
+  {% endblock %}
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top section">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <img src="{{ asset('images/logo.png')}}" width="129" height="40" alt="Blogy logo">
+          </a>
+
+          <p class="footer-text">
+            Retrouvez l'histoire africaine et les enjeux modernes lié à la communauté africaine à travers le monde sur ce blog
+          </p>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="h5">Social</p>
+          </li>
+
+          <li class="footer-list-item">
+            <ion-icon name="logo-facebook"></ion-icon>
+
+            <a href="#" class="footer-link hover:underline">Facebook</a>
+          </li>
+
+          <li class="footer-list-item">
+            <ion-icon name="logo-twitter"></ion-icon>
+
+            <a href="#" class="footer-link hover:underline">Instagram</a>
+          </li>
+
+          <li class="footer-list-item">
+            <ion-icon name="logo-pinterest"></ion-icon>
+
+            <a href="#" class="footer-link hover:underline">Twitter</a>
+          </li>
+
+          <li class="footer-list-item">
+            <ion-icon name="logo-vimeo"></ion-icon>
+
+            <a href="#" class="footer-link hover:underline">LinkedIn</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="h5">À propos</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link hover:underline">Fondateur du blog</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link hover:underline">Auteurs</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link hover:underline">Contact</a>
+          </li>
+
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="h5">Les rubriques</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link hover:underline">Histoires Africaines</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link hover:underline">Excellence Panafricaine</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link hover:underline">La diaspora Africaine</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link hover:underline">Librairie Tamery</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="h5">Rejoins le club</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link hover:underline">Compte</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link hover:underline">Adhésion</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link hover:underline">Événements à venir</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link hover:underline">Club privé 'Back to Africa'</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="section footer-bottom">
+
+        <p class="copyright">
+          &copy; Blog Panafricain 2023. Publié par <a href="#" class="copyright-link hover:underline">TonyFROGET</a>.
+        </p>
+
+      </div>
+
+    </div>
+  </footer>
+  {% block javascripts %}
+        <script src="{{ asset('js/app.js') }}"></script>
+{% endblock %}
     </body>
 </html>
